@@ -1,0 +1,73 @@
+<div class="cl-page" id="activityDetail">
+  <div class="cl-bar-title">
+    <a href="javascript:;" class="cl-btn" data-transition="slide-out" id="backButton">
+      <i class="prev-icon"></i>
+    </a>
+    <div id="ee" class="cl-title"><span><%= title %> </span></div>
+    <a href="javascript:;" class="cl-btn"  id="shareButton">
+      <i class="share-icon"></i>
+    </a>
+  </div>
+
+
+    <div id="editPanel" class="hide">
+      <a href="javascript:;" id="updateButton" class="cl-btn cl-depth-btn red">Wijzig deze activiteit</a>
+    </div>
+
+  <div class="cl-content">
+    <div id="activity-header">
+
+      <div id="activityMap">
+
+      </div>
+
+      <div id="activityInfo">
+          <div>
+          <i class="location-icon"></i><span><%= location %>
+          </span></div>
+        </span>
+        
+        <a id="navigateButton" href="javascript:;">Toon de weg</a>
+
+      </div>
+    </div>
+
+    
+    <div class="cl-btn-toolbar flex" id="activityDetailTabs">
+      <a data="#praktischContent" class="cl-btn active">Praktisch</a>
+      <a data="#mediaContent" id="mediaButton" class="cl-btn">Foto's</a>
+      <a data="#messagesContent" class="cl-btn">Berichten</a>
+    </div>
+
+
+    <div id="activityContent">
+
+    </div>
+  </div>
+
+  
+    <div class="hide" id="popover" data-element-to-be-toggled="popover-context" data-element-to-be-closed="popover-context">
+      <div class="cl-popover align-center pop-from-bottom" id="bd">
+      <div class="cl-article padded">
+        <ul>
+          <li>
+            <a id="facebookShareButton" href="javascript:;" class="cl-btn cl-depth-btn blue">Delen op Facebook</a>
+          </li>
+        </ul>
+      <a href="javascript:;" id="popover-close" class="cl-btn cl-depth-btn red" data-close-element="popover-context">Sluit</a>
+      </div>
+      </div>
+      <div class="cl-modal-backdrop"></div>
+    </div>
+</div>
+
+  <div id="messageBox">
+    <form action="javascript:;" id="messageForm">
+      <div class="field">
+        <input type="button" id="messageSubmit" value="Verzend" class="cl-btn flat-green" />
+        <span><input type="text" placeholder="Schrijf een bericht" id="messageInput" required/></span>
+      </div>
+  </form>
+</div>
+
+

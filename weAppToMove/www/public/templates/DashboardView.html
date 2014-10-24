@@ -1,0 +1,53 @@
+<div class="cl-page mapClosed" id="dashboard">
+    <!--<a href="javascript:;" class="cl-btn" data-transition="slide-out" id="searchButton">
+    <i class="search-icon"></i>
+    </a>
+    <a href="#createActivity" class="cl-btn" data-transition="slide-out" id="createActivityButton">
+    <i class="add-icon"></i>
+    </a>
+
+        <div class="cl-bar hide" id="searchBar">
+    <form action="javascript:;" id="searchForm">
+        <input type="search" placeholder="Zoeken naar activiteiten" id="searchInput"/>
+    </form>
+    </div>-->
+  <div class="cl-bar-title">
+    <a href="javascript:;" class="cl-btn cl-btn-header" data-transition="slide-out" id="menuButton">
+      <i class="menu-icon">&nbsp;</i>
+    </a>
+    <div class="cl-title">Activiteiten</div>
+        <a href="#createActivity" class="cl-btn" data-transition="slide-out">
+      <i class="add-icon">&nbsp;</i>
+    </a>
+  </div>
+    <div class="cl-btn" id="fullScreenButton"></div>
+    <div id="map_canvas"></div>
+
+    <div class="cl-bar" id="sortBar">
+        <div class="cl-btn-group float" id="sortSelector">
+            <% _.each(sortForm, function(acs, index) { %> 
+                <%  var selected = ""; %> 
+                <%  if(index === 0){  selected = "active" } %>
+                <a  class="<%= selected %>" href="javascript:;" class="cl-btn"><%= acs.title %></a>
+            <% }); %>         
+        </div>
+    </div>
+
+    <div class="cl-content">
+
+        <div class="no-found" style="display: none;">
+            Er werden geen activiteiten gevonden
+        </div>
+
+        <div id="activityTable" style="overflow: scroll; height: auto;">
+            <div class="cl-message">
+                Er zijn momenteel geen activiteiten beschikbaar. 
+            </div>
+        </div>
+    </div>
+    <div id="mapBtn">
+        <a  href="javascript:;" id="closeMapButton" class="cl-btn cl-depth-btn ">Kaart verkleinen</a>
+    </div>
+</div>
+
+<span class="javascript:;" id="downButton"></span>
